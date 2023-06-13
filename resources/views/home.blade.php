@@ -7,29 +7,32 @@
 
 @section('content')
 
-<main>
+<main class="container my-5">
 
-    <div class="jumbotron">
-        <img src="/img/jumbotron.jpg" alt="">
-    </div>
+    <h1 class="my-5">Elenco Fumetti</h1>
 
-    <div class="content">
-        <div class="dc-container">
-            <span class="series">Current series</span>
-            <div class="card-container">
-               @foreach ( $cards as $card)
-                <div class="card">
-                    <div class="img-container">
-                        <img src="{{$card['thumb']}}" alt="">
-                    </div>
-                    <span>{{$card['series']}}</span>
-                </div>
+    <table class="table border-1 border">
+        <thead>
+            <tr>
+                <th scope="col">Titolo</th>
+                <th scope="col">Prezzo</th>
+                <th scope="col">Serie</th>
+                <th scope="col">Data</th>
+                <th scope="col">Tipologia</th>
+            </tr>
+        </thead>
+            @foreach ($cards as $card )
+            <tbody>
+            <tr>
+                <th>{{$card['title']}}</th>
+                <td>{{$card['price']}}</td>
+                <td>{{$card['series']}}</td>
+                <td>{{$card['sale_date']}}</td>
+                <td>{{$card['type']}}</td>
+            </tr>
+            </tbody>
             @endforeach
-               <button type="button">Load More</button>
-           </div>
-        </div>
-    </div>
-
+      </table>
 
 </main>
 
