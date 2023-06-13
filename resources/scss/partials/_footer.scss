@@ -1,0 +1,97 @@
+.footer-top-cta{
+    background-color: $primary-color;
+    padding: 50px;
+    display: flex;
+    vertical-align: middle;
+    span{
+        color: white;
+        text-transform: uppercase;
+        font-size:  15px ;
+    }
+    img{
+        height: 55px;
+        margin-right: 15px;
+    }
+    .elements{
+        display: flex;
+        align-items: center;
+        &:last-child{
+            img{
+                height: 40px;
+
+            }
+        }
+    }
+
+}
+
+.footer-middle{
+    background-image: url(/img/footer-bg.jpg);
+    background-repeat:no-repeat ;
+    min-height: 350px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    img{
+      position: absolute;
+      right: 300px;
+
+    }
+}
+
+.footer-bottom{
+    padding: 30px;
+    background-color: $quinary-color;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button{
+        color: white;
+        font-size: 17px;
+        font-weight: bold;
+        padding: 15px;
+        border: 2px solid $primary-color;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .follow-us-flex{
+        display: flex;
+        align-items: center;
+        h4{
+            color: $primary-color;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        img{
+            margin-left: 20px;
+        }
+    }
+
+}
+
+.footer-middle-menu{
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    h4{
+        color: white;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+    li{
+        list-style: none;
+        a{
+            font-size: 12px;
+            text-decoration: none;
+            color: $tertiary-color ;
+            line-height: 1.4rem;
+        }
+    }
+    .dc-me{
+        margin-right: 30px;
+        margin-top: 17px;
+    }
+
+}

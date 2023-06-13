@@ -1,0 +1,26 @@
+header{
+    background-color:white;
+    height: 115px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    img{
+        width: 70px;
+    };
+}
+.header-menu{
+    ul{
+        display: flex;
+        margin-left: 5px;
+        li{
+            list-style: none;
+            a{
+                font-weight: bold;
+                font-size: 12px;
+                margin-left: 40px;
+                text-decoration: none;
+                color: $quaternary-color ;
+            }
+        }
+    }
+}
