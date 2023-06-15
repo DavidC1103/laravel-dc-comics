@@ -1,8 +1,6 @@
 @extends('layout.main')
 
-@php
-    $cards = config('comics');
-@endphp
+
 
 @section('content')
 <div class="container my-5">
@@ -17,16 +15,18 @@
                 <th scope="col">Serie</th>
                 <th scope="col">Data</th>
                 <th scope="col">Tipologia</th>
+                <th scope="col">Dettagli</th>
             </tr>
         </thead>
-            @foreach ($cards as $card )
+            @foreach ($movies as $movie )
             <tbody>
             <tr>
-                <th>{{$card['title']}}</th>
-                <td>{{$card['price']}}</td>
-                <td>{{$card['series']}}</td>
-                <td>{{$card['sale_date']}}</td>
-                <td>{{$card['type']}}</td>
+                <th>{{$movie['title']}}</th>
+                <td>{{$movie['price']}}</td>
+                <td>{{$movie['series']}}</td>
+                <td>{{$movie['sale_date']}}</td>
+                <td>{{$movie['type']}}</td>
+                <td><a class="btn btn-primary" href="{{ route('movies.show' , $movie) }}"><i class="fa-brands fa-golang text-white fs-5"></i></a></td>
             </tr>
             </tbody>
             @endforeach
